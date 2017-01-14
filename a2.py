@@ -60,20 +60,41 @@ def contains_sequence(dna1, dna2):
 
     return dna1.find(dna2) >= 0
 
-##def is_valid_sequence(pot_sequence)
+def is_valid_sequence(pot_sequence):
     '''(str) -> bool
 
     Return True if and only if the DNA sequence
     is valid (that is, it contains no characters other
     than 'A', 'T', 'C' and 'G'). 
 
-    >>> contains_sequence('ATCGGC')
+    >>> is_valid_sequence('TCGGC')
     True
-    >>> contains_sequence('ATCZQF')
+    >>> is_valid_sequence('ATCZQF')
     False
-    >>> contains_sequence('ATCGgc')
+    >>> is_valid_sequence('ATCGgc')
     False
     '''
+
+    valid = True
+    
+    for char in pot_sequence:
+        if char != 'A' and char != 'C' and char != 'G' and char != 'T':
+            valid = False
+        
+    return valid
+        
+    
+
+##    return ('Q' or 'W' or 'E' or 'R' or 'Y' or 'U' or 'I' or 'O' or 'P' or 'S' or 'D' or 'H' or 'J' or 'K' or'L' or 'Z' or 'X' or 'V' or 'B' or 'N' or 'M') in pot_sequence
+##      
+
+##    if ('Q' or 'W' or 'E' or 'R' or 'Y' or 'U' or 'I' or 'O' or 'P' or 'S' or 'D' or 'H' or 'J' or 'K' or'L' or 'Z' or 'X' or 'V' or 'B' or 'N' or 'M') in pot_sequence:
+##        pot_sequence = False
+        
+##    else:
+##         pot_sequence = True
+
+##    return ('A' or 'T' or 'C' or 'G') in pot_sequence
 
     
 ##    for char in pot_sequence:
