@@ -131,23 +131,58 @@ def get_complement(nuc):
     '''(str) -> str
 
     The first parameter is a nucleotide ('A', 'T', 'C' or 'G').
-    Return the nucleotide's complement. We have intentionally
-    not given you any examples for this function. The
-    Problem Domain section explains what a nucleotide is
-    and what a complement is.
+    Return the nucleotide's complement. 
 
-    >>> get_complement()
+    >>> get_complement('A')
+    'T'
+    >>> get_complement('T')
+    'A'
+    >>> get_complement('C')
+    'G'
+    >>> get_complement('G')
+    'C'
     
     '''
-
+    
+    for char in nuc:
+        if char == 'A':
+            return 'T'
+        elif char == 'T':
+            return 'A'
+        elif char == 'C':
+            return 'G'
+        else:
+            return 'C'
 
 def get_complementary_sequence(seq):
     '''(str) -> str
 
     The parameter is a DNA sequence. Return the
     DNA sequence that is complementary to the
-    given DNA sequence. For example, if you call this
-    function with 'AT' as the argument, it should return 'TA'.
-
-    >>> get_complementary_sequence()
+    given DNA sequence.
+    
+    >>> get_complementary_sequence('AT')
+    'TA'
+    >>> get_complementary_sequence('TG')
+    'AC'
+    >>> get_complementary_sequence('ACGTACG')
+    'TGCATGC'
+    
     '''
+
+    comp = ''
+
+    for char in seq:
+        if char == 'A':
+            comp = comp + 'T' 
+        if char == 'T':
+            comp = comp + 'A'  
+        if char == 'C':
+            comp = comp + 'G'  
+        if char == 'G':
+            comp = comp + 'C'  
+            
+##    comp = comp + char
+
+    return comp
+    
