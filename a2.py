@@ -84,7 +84,7 @@ def is_valid_sequence(pot_sequence):
     return valid
         
     
-
+##    thought experiments: 
 ##    return ('Q' or 'W' or 'E' or 'R' or 'Y' or 'U' or 'I' or 'O' or 'P' or 'S' or 'D' or 'H' or 'J' or 'K' or'L' or 'Z' or 'X' or 'V' or 'B' or 'N' or 'M') in pot_sequence
 ##      
 
@@ -103,11 +103,51 @@ def is_valid_sequence(pot_sequence):
 ##    return
 
 
-##def insert_sequence
+def insert_sequence(dna1, dna2, index):
     '''(str, str, int) -> str
 
-    Return
+    Return the DNA sequence obtained
+    by inserting the second DNA sequence into the first DNA
+    sequence at the given index. The first two parameters are
+    DNA sequences and the
+    third parameter is an index. (You can assume that the
+    index is valid.) When coming up with more examples, think about
+    where the second DNA sequence might be inserted: what are the extremes?
 
-    >>>is_valid_sequence()
+    >>> insert_sequence('CCGG', 'AT', 2)
+    'CCATGG'
+    >>> insert_sequence('TCC', 'GGGG' , 0)
+    'GGGGTCC'
+    >>> insert_sequence('TCC', 'GGGG', 6)
+    'TCCGGGG'
+    '''
+
+    return dna1[:index] + dna2 + dna1[index:]
     
+## s[:5] + 'ed' + s[5:]
+## learn + ed to program
+
+def get_complement(nuc):
+    '''(str) -> str
+
+    The first parameter is a nucleotide ('A', 'T', 'C' or 'G').
+    Return the nucleotide's complement. We have intentionally
+    not given you any examples for this function. The
+    Problem Domain section explains what a nucleotide is
+    and what a complement is.
+
+    >>> get_complement()
+    
+    '''
+
+
+def get_complementary_sequence(seq):
+    '''(str) -> str
+
+    The parameter is a DNA sequence. Return the
+    DNA sequence that is complementary to the
+    given DNA sequence. For example, if you call this
+    function with 'AT' as the argument, it should return 'TA'.
+
+    >>> get_complementary_sequence()
     '''
